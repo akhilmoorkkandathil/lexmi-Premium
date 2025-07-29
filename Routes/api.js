@@ -1,10 +1,10 @@
 // router/api.js
 const express = require('express');
 const router = express.Router();
+const controller = require('../controller/functions');
 
-// Define your API routes here
-router.get('/', (req, res) => {
-  res.send('🚀 Hello Justin! Your Express server is running from router/api.js!');
-});
+
+// Login route
+router.post('/login', controller.login);
 
 module.exports = router;
